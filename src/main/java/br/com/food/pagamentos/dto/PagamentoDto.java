@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 
 public class PagamentoDto  {
@@ -18,6 +19,10 @@ public class PagamentoDto  {
     private Status status;
     private Long formaDePagamentoId;
     private Long pedidoId;
+
+    // Nova propriedade
+    private List<ItemPedidoDTO> itens;
+
 
     public Long getId() {
         return id;
@@ -89,5 +94,13 @@ public class PagamentoDto  {
 
     public void setPedidoId(Long pedidoId) {
         this.pedidoId = pedidoId;
+    }
+
+    public List<ItemPedidoDTO> getItens() {
+        return itens;
+    }
+
+    public void setItens(List<ItemPedidoDTO> itens) {
+        this.itens = itens;
     }
 }
